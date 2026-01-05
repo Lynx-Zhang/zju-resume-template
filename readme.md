@@ -91,9 +91,17 @@ make clean
 3. **自动触发**：一旦您提交 (Commit) 并推送 (Push) 代码，GitHub Actions 会自动开始构建。
 4. **下载简历**：
     *   点击仓库上方的 **Actions** 标签页。
+        
+        ![Step 1](ci_steps/1.png)
     *   在左侧列表中点击 **Build Resume** 工作流。
+        
+        ![Step 2](ci_steps/2.png)
     *   点击最新的那次运行记录（通常显示为绿色对勾 ✅）。
+        
+        ![Step 3](ci_steps/3.png)
     *   在页面底部的 **Artifacts** 区域，点击 **CV-PDF** 即可下载生成的 PDF 文件。
+        
+        ![Step 4](ci_steps/4.png)
 
 ## 参考与致谢 (Acknowledgements)
 
