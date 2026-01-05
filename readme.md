@@ -1,5 +1,6 @@
 # ZJU LaTeX Resume Template
 [![Build Resume](https://github.com/maksymilan/zju-resume-template/actions/workflows/build.yml/badge.svg)](https://github.com/maksymilan/zju-resume-template/actions/workflows/build.yml)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/maksymilan/zju-resume-template)
 
 这是一个浙江大学 LaTeX 简历模板。
 
