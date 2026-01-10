@@ -4,6 +4,10 @@
 
 这是一个浙江大学 LaTeX 简历模板。
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=maksymilan/zju-resume-template&type=Date)](https://star-history.com/#maksymilan/zju-resume-template&Date)
+
 ## 🥳 效果
 ![简历效果](CV.jpg)
 
