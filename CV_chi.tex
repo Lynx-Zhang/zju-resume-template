@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+
+\setlength{\parindent}{0pt}
+\usepackage{xltxtra}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{url}
+\urlstyle{tt}
+\usepackage{xcolor}
+\definecolor{CVBlue}{RGB}{23,110,191}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{enumitem}
+\CJKsetecglue{} %% 取消中文与数字之间的间隙
+
+%% 主文档字体设置
+\setmainfont[
+    Path = fonts/Main/,
+    Extension = .otf,
+    BoldFont = texgyretermes-bold.otf, % 加粗字体
+]{texgyretermes-regular.otf} % 正文字体
+
+% 中文字体设置
+\setCJKmainfont[
+    Path = fonts/hansans/,
+    Extension = .ttf,
+    BoldFont = NotoSansSC-Bold.ttf, % 加粗字体
+]{NotoSansSC-Regular.otf} % 正文字体
+
+\usepackage{relsize}
+\usepackage{xspace}
+\usepackage{array}
+
+% 使用 fontawesome（部分图标）
+\usepackage{fontawesome} 
+
+% A4纸，上下左右边距
+\usepackage[
+    a4paper,
+    left=1.2cm,
+    right=1.2cm,
+    top=1.5cm,
+    bottom=1cm,
+    nohead
+]{geometry}
+
+\renewcommand{\baselinestretch}{1.3} % 行间距设为1.3
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\setlist{noitemsep} % 取消列表项间的额外间距
+\setlist[itemize]{topsep=0.25em, leftmargin=*}
+\setlist[enumerate]{topsep=0.25em, leftmargin=*}
+
+% --- 用于控制【不同项目之间】的垂直距离 ---
+\newlength{\interProjectSpacing}
+\setlength{\interProjectSpacing}{0.6em} % <--- 在此调整项目之间的距离
+\newcommand{\projectsep}{\vspace{\interProjectSpacing}}
+
+% --- 用于控制【项目标题】与下方【项目描述】的距离 ---
+\newlength{\intraProjectTitleSep}
+\setlength{\intraProjectTitleSep}{-1em} % <--- 在此调整标题和描述的距离
+\newcommand{\titlebreak}{\\[\intraProjectTitleSep]}
+
+% --- 用于控制【项目描述】与下方【要点列表】的距离 ---
+\newlength{\intraProjectListTopSep}
+\setlength{\intraProjectListTopSep}{0.3em} % <--- 在此调整描述和列表的距离
+
+% =======================================================================
+
+\titleformat{\section}         % 定制 \section 命令 
+{\large\bfseries\raggedright} % 将 section 标题设置为大号、粗体且左对齐
+{}{0em}                      % 可用于为所有 section 添加前缀（如“章节...”）
+{}                           % 可用于在标题前插入代码
+[{\color{CVBlue}\titlerule}]  % 在标题后插入一条横线
+\titlespacing*{\section}{0cm}{*1.6}{*1.2}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\centerline{\LARGE\bfseries{张博研}} 
+
+\centerline{\normalsize{\faPhone\ (+86) 182-9548-5672 \quad \faEnvelopeO\ \href{mailto:boyan-z@outlook.com}{boyan-z@outlook.com}}} 
+
+\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育经历}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l >{\raggedright\arraybackslash}p{0.42\textwidth} r @{} }
+    \textbf{瑞典皇家理工学院 (KTH)} & 硕士，计算机科学 & 2025.08 – 2027.06 \\
+    \textbf{浙江大学} & 本科，计算机科学与技术 \quad GPA: 3.99/4.3 & 2022.08 – 2025.06
+\end{tabular*}
+
+\section{\makebox[\widthof{\faBriefcase}][c]{\color{CVBlue}\faBriefcase}\ 工作经历}
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{微软亚洲互联网工程院 (北京)} & 软件工程实习生 (Software Engineer Intern) & 2026.06 – 2026.09 \\
+\end{tabular*}\titlebreak
+\begin{itemize}[nosep]
+    \item \textbf{自动化评估体系建设与调优:} 参与构建基于 LLM-as-a-Judge 的多智能体评估流水线。负责从产品端到测试端的 Case 同步与集成，通过深度调优评估智能体的 Prompt 与评分细则，并结合人工校验对比，将模型在复杂 Excel 工作簿操作中的评估准确度与一致性提升了 20\%-30\%。
+    \item \textbf{Agent 框架性能与上下文优化:} 针对 Agent 获取复杂外部数据（如邮件流）的场景进行底层逻辑优化。设计并实现了基于页面的数据截断、批量请求机制以及同源 Thread 会话自动去重合并功能。大幅减少了冗余上下文对 Token 的占用，显著降低了系统 API 调用的延迟并提升了响应效率。
+\end{itemize}
+
+\projectsep
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{ErholCare (瑞典)} & 移动端开发实习生 (Mobile Developer Intern) & 2025.11 – 2026.02 \\
+\end{tabular*}\titlebreak
+\begin{itemize}[nosep]
+    \item \textbf{主导设计并开发 AI 驱动的医疗护理移动应用:} 针对护理人员及医疗机构需求，利用 Dart/Flutter 实现全流程功能开发；通过集成 AI 模块优化文档自动化生成、智能排班及团队协作流程，提升了业务处理效率。
+    \item \textbf{深度性能调优与交互体验升级:} 针对复杂 UI 场景进行专项性能优化，解决多端适配及长列表卡顿问题；通过深度调试与用户反馈持续迭代交互逻辑，经后期用户调研验证，系统可用性与满意度均获得显著提升。
+\end{itemize}
+
+\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
+
+\textbf{类 Linux 操作系统实现 (Mini-OS)} \hfill C and RISC-V assembly \titlebreak
+\begin{itemize}[nosep]
+    \item 基于 RV64 (RISC-V) 架构实现类 Linux 极简系统，涵盖 Shell、文件 I/O 及进程管理等核心功能。
+    \item 通过底层开发深度实践了 Linux 内核机理及计算机系统底层设计原理。
+\end{itemize}
+
+\projectsep
+
+\textbf{轻量级关系型数据库系统 (Mini-SQL)} \hfill C++ \titlebreak
+\begin{itemize}[nosep]
+    \item 开发并实现轻量级 DBMS，核心模块涵盖 SQL 解析、执行引擎、B+ 树索引结构及命令行交互界面。
+    \item 实现底层分页管理与缓冲区机制，基于面向对象与模块化架构设计，确保系统高扩展性，深度实践关系型数据库底层原理。
+\end{itemize}
+
+\projectsep
+
+\textbf{基于 GAN 的图像自动上色系统} \hfill Python (PyTorch, Tkinter) \titlebreak
+\begin{itemize}[nosep]
+    \item 基于 GAN 架构实现灰度图自动上色，采用 U-Net 生成器与 ResNet 判别器显著提升了色彩还原的纹理细节与一致性。
+    \item 构建交互式 GUI 应用程序，集成实时上色与可视化功能，提升了算法的可解释性与用户交互体验。
+\end{itemize}
+
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
+\begin{itemize}[nosep]
+    \item \textbf{编程语言:} C/C++, Java, Python, TypeScript, Node.js, Dart, RISC-V 汇编, Verilog
+    \item \textbf{框架与工具:} PyTorch, Spring Boot, Flutter, MySQL, Git, Xilinx Vivado
+\end{itemize}
+
+\section{\makebox[\widthof{\faTrophy}][c]{\color{CVBlue}\faTrophy}\ 荣誉奖励}
+\begin{itemize}
+    \item 浙江大学校设三等奖学金 \hfill 2022-2023学年
+    \item 国家励志奖学金 \hfill 2022-2023学年及2024-2025学年
+\end{itemize}
+
+\end{document}

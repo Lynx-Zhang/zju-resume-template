@@ -33,6 +33,7 @@
 
 \usepackage{relsize}
 \usepackage{xspace}
+\usepackage{array}
 
 % 使用 fontawesome（部分图标）
 \usepackage{fontawesome} 
@@ -47,7 +48,7 @@
     nohead
 ]{geometry}
 
-\renewcommand{\baselinestretch}{1.5} % 行间距设为1.5
+\renewcommand{\baselinestretch}{1.3} % 行间距设为1.3
 
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -57,17 +58,17 @@
 
 % --- 用于控制【不同项目之间】的垂直距离 ---
 \newlength{\interProjectSpacing}
-\setlength{\interProjectSpacing}{0.9em} % <--- 在此调整项目之间的距离
+\setlength{\interProjectSpacing}{0.6em} % <--- 在此调整项目之间的距离
 \newcommand{\projectsep}{\vspace{\interProjectSpacing}}
 
 % --- 用于控制【项目标题】与下方【项目描述】的距离 ---
 \newlength{\intraProjectTitleSep}
-\setlength{\intraProjectTitleSep}{0.4em} % <--- 在此调整标题和描述的距离
+\setlength{\intraProjectTitleSep}{-1em} % <--- 在此调整标题和描述的距离
 \newcommand{\titlebreak}{\\[\intraProjectTitleSep]}
 
 % --- 用于控制【项目描述】与下方【要点列表】的距离 ---
 \newlength{\intraProjectListTopSep}
-\setlength{\intraProjectListTopSep}{0.2em} % <--- 在此调整描述和列表的距离
+\setlength{\intraProjectListTopSep}{0.3em} % <--- 在此调整描述和列表的距离
 
 % =======================================================================
 
@@ -83,57 +84,75 @@
 
 \centerline{\LARGE\bfseries{Boyan Zhang}} 
 
-\centerline{\normalsize{\faPhone\ (+46) 764581398 \quad \faEnvelopeO\ \href{mailto:boyan-z@outlook.com}{boyan-z@outlook.com}}} 
-
-\centerline{\normalsize{\faGithubSquare\ \href{https://github.com/boyanzhang}{https://github.com/boyanzhang} \quad \faRssSquare\ \href{https://boyanzhang.github.io/}{https://boyanzhang.github.io/}}}
+\centerline{\normalsize{\faPhone\ (+86) 182-9548-5672 \quad \faEnvelopeO\ \href{mailto:boyan-z@outlook.com}{boyan-z@outlook.com} \quad \faLinkedinSquare\ \href{https://www.linkedin.com/in/boyan-zhang-cs}{www.linkedin.com/in/boyan-zhang-cs}}} 
 
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ Education}
-\textbf{KTH Royal Institute of Technology} \hfill Aug 2025 – Present\\[0.5em] 
-M.Sc. in Computer Science
-\begin{itemize}[nosep]
-    \item Relevant courses: Machine Learning, Natural Language Processing, Computer Networks, Database Systems
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{KTH Royal Institute of Technology} & M.Sc. in Computer Science & Aug 2025 – Jun 2027 \\
+\end{tabular*}
+\begin{itemize}[nosep,leftmargin=1.5em]
+    \item Selected for the Zhejiang University--KTH 3+2 Joint Master's Program (accelerated B.Eng.–M.Sc. pathway).
 \end{itemize}
 
-\textbf{Zhejiang University} \hfill Aug 2022 – Jun 2025\\[0.5em]
-B.Eng. in Computer Science and Technology, GPA: 3.99/4.3
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{Zhejiang University} & B.Eng. in Computer Science and Technology & Aug 2022 – Jun 2025
+\end{tabular*}
+
+\section{\makebox[\widthof{\faBriefcase}][c]{\color{CVBlue}\faBriefcase}\ Work Experience}
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{Microsoft STCA (Beijing, China)} & Software Engineer Intern & Jun 2026 – Sep 2026 \\
+\end{tabular*}\titlebreak
 \begin{itemize}[nosep]
-    \item Relevant courses: Programming, Machine Learning, Computer Networks
+    \item \textbf{Automated Evaluation System Construction \& Tuning:} Participated in building a multi-agent evaluation pipeline based on LLM-as-a-Judge. Responsible for case synchronization and integration from the product side to the testing side. By deeply tuning the prompt and grading rubrics of the evaluation agent, and combining it with manual verification, improved the evaluation accuracy and consistency of the model in complex Excel workbook operations by 20\%-30\%.
+    \item \textbf{Agent Framework Performance \& Context Optimization:} Optimized the underlying logic for scenarios where the Agent retrieves complex external data (e.g., email streams). Designed and implemented page-based data truncation, batch request mechanisms, and automatic deduplication and merging of homologous Thread sessions. Significantly reduced the token usage of redundant contexts, substantially lowered the system API call latency, and improved response efficiency.
+\end{itemize}
+
+\projectsep
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{ErholCare (Stockholm, Sweden)} & Mobile Developer Intern & Nov 2025 – Feb 2026 \\
+\end{tabular*}\titlebreak
+\begin{itemize}[nosep]
+    \item \textbf{AI-Driven Mobile Application Development:} Designed and developed a comprehensive AI-driven mobile application for care workers and healthcare organizations, significantly improving efficiency in documentation, scheduling, and team collaboration.
+    \item \textbf{Performance Optimization \& UX Upgrade:} Optimized the app's performance to ensure smooth operation across various devices and improved the user experience in complex interfaces, as measured by user satisfaction surveys showing a significant improvement, by doing intensive debugging, performance optimization, and closely collaborating with users to refine the interface based on their feedback.
 \end{itemize}
 
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ Project Experience}
 
-\textbf{Mini-OS} \hfill Aug 2024 – Oct 2024 \titlebreak
-Developed a minimalist Linux-like OS for RV64 with file I/O and process management using C and RISC-V assembly. Strengthened understanding of Linux internals and low-level system design.
-
-\textbf{E-Commerce Price Comparison Platform} \hfill Jan 2025 – Mar 2025 \titlebreak
-Developed a full-stack web application for product price comparison across multiple e-commerce sites using Java, Spring Boot, and Vue.js.
+\textbf{Mini-OS} \hfill C and RISC-V assembly \titlebreak
+\begin{itemize}[nosep]
+    \item Built a minimalist Linux-like OS for RV64 with shell, file I/O, process management and other essential functionalities.
+    \item Strengthened understanding of Linux internals and low-level system design.
+\end{itemize}
 
 \projectsep
 
-\textbf{Mobile Developer Intern, ErholCare} \hfill Jun 2024 – Aug 2024 \titlebreak
-ErholCare is a comprehensive platform for care workers and healthcare organizations to manage documentation, schedules, and team collaboration efficiently.
+\textbf{Mini-SQL} \hfill C++ \titlebreak
 \begin{itemize}[nosep]
-    \item Developed mobile application using Dart and Flutter for ErholCare, an AI-driven platform.
-    \item Enhanced mobile app features for documentation management, scheduling, and team collaboration.
-    \item Optimized app performance and user experience in an agile development environment.
+    \item Developed a lightweight DBMS with SQL parsing, query execution, and character-based user interface.
+    \item Practiced object-oriented design and modular architecture for scalable systems, strengthened understanding of relational database principles.
+\end{itemize}
+
+\projectsep
+
+\textbf{Image Colorization using GANs} \hfill Python (PyTorch, Tkinter) \titlebreak
+\begin{itemize}[nosep]
+    \item Trained a GAN with U-Net generator and ResNet-based discriminator to colorize grayscale images.
+    \item Built a GUI application for interactive image colorization and model visualization.
 \end{itemize}
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ Skills}
 \begin{itemize}[nosep]
-    \item \textbf{Programming Languages:} Dart, Flutter, C/C++, Java, Python
-    \item \textbf{Tools & Frameworks:} PyTorch, Spring Boot, MySQL, Git, Xilinx Vivado
+    \item \textbf{Programming Languages:} C/C++, Java, Python, TypeScript, Node.js, Dart, RISC-V Assembly, Verilog
+    \item \textbf{Frameworks \& Tools:} PyTorch, Spring Boot, Flutter, MySQL, Git, Xilinx Vivado
 \end{itemize}
 
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faList}\ Awards}
+\section{\makebox[\widthof{\faTrophy}][c]{\color{CVBlue}\faTrophy}\ Honours and Awards}
 \begin{itemize}
-    \item National Encouragement Scholarship (China) \hfill 2024
-\end{itemize}
-
-\section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ Other}
-\begin{itemize}[parsep=0.5ex]
-    \item \textbf{Technical Blog:} \href{https://boyanzhang.github.io/}{https://boyanzhang.github.io/}
-    \item \textbf{GitHub:} \href{https://github.com/boyanzhang}{https://github.com/boyanzhang}
-    \item \textbf{Languages:} Fluent in English and Mandarin, CET-4, CET-6
+    \item Third Prize Scholarship, Zhejiang University \hfill 2022-2023
+    \item National Encouragement Scholarship (China) \hfill 2022-2023 \& 2024-2025
 \end{itemize}
 
 \end{document}
