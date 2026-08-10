@@ -105,8 +105,9 @@
     \textbf{Microsoft STCA (Beijing, China)} & Software Engineer Intern & Jun 2026 – Sep 2026 \\
 \end{tabular*}\titlebreak
 \begin{itemize}[nosep]
-    \item \textbf{Automated Evaluation System Construction \& Tuning:} Participated in building a multi-agent evaluation pipeline based on LLM-as-a-Judge. Responsible for case synchronization and integration from the product side to the testing side. By deeply tuning the prompt and grading rubrics of the evaluation agent, and combining it with manual verification, improved the evaluation accuracy and consistency of the model in complex Excel workbook operations by 20\%-30\%.
-    \item \textbf{Agent Framework Performance \& Context Optimization:} Optimized the underlying logic for scenarios where the Agent retrieves complex external data (e.g., email streams). Designed and implemented page-based data truncation, batch request mechanisms, and automatic deduplication and merging of homologous Thread sessions. Significantly reduced the token usage of redundant contexts, substantially lowered the system API call latency, and improved response efficiency.
+    \item \textbf{Agentic Evaluation Infrastructure:} Enhanced an LLM-as-a-Judge evaluation framework for Enterprise Search agents, owning case synchronization, automated grading, and human verification workflows. Redesigned the evaluator with agentic reasoning over workbook outputs, chat responses, and execution traces, enabling fine-grained diagnosis of model reasoning issues versus tool failures.
+
+    \item \textbf{Enterprise Search Retrieval Optimization:} Designed and shipped production optimizations for LLM agent retrieval, including lazy context loading for email threads and batched graph traversal for organizational queries. Reduced redundant context exposure and tool invocation overhead through selective retrieval and optimized BFS-based graph expansion.
 \end{itemize}
 
 \projectsep
