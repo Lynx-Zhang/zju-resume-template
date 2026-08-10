@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+
+\setlength{\parindent}{0pt}
+\usepackage{xltxtra}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{url}
+\urlstyle{tt}
+\usepackage{xcolor}
+\definecolor{CVBlue}{RGB}{23,110,191}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{enumitem}
+\CJKsetecglue{} %% 取消中文与数字之间的间隙
+
+%% 主文档字体设置
+\setmainfont[
+    Path = fonts/Main/,
+    Extension = .otf,
+    BoldFont = texgyretermes-bold.otf, % 加粗字体
+]{texgyretermes-regular.otf} % 正文字体
+
+% 中文字体设置
+\setCJKmainfont[
+    Path = fonts/hansans/,
+    Extension = .ttf,
+    BoldFont = NotoSansSC-Bold.ttf, % 加粗字体
+]{NotoSansSC-Regular.otf} % 正文字体
+
+\usepackage{relsize}
+\usepackage{xspace}
+\usepackage{array}
+
+% 使用 fontawesome（部分图标）
+\usepackage{fontawesome} 
+
+% A4纸，上下左右边距
+\usepackage[
+    a4paper,
+    left=1.2cm,
+    right=1.2cm,
+    top=1.5cm,
+    bottom=1cm,
+    nohead
+]{geometry}
+
+\renewcommand{\baselinestretch}{1.3} % 行间距设为1.3
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\setlist{noitemsep} % 取消列表项间的额外间距
+\setlist[itemize]{topsep=0.25em, leftmargin=*}
+\setlist[enumerate]{topsep=0.25em, leftmargin=*}
+
+% --- 用于控制【不同项目之间】的垂直距离 ---
+\newlength{\interProjectSpacing}
+\setlength{\interProjectSpacing}{0.6em} % <--- 在此调整项目之间的距离
+\newcommand{\projectsep}{\vspace{\interProjectSpacing}}
+
+% --- 用于控制【项目标题】与下方【项目描述】的距离 ---
+\newlength{\intraProjectTitleSep}
+\setlength{\intraProjectTitleSep}{-1em} % <--- 在此调整标题和描述的距离
+\newcommand{\titlebreak}{\\[\intraProjectTitleSep]}
+
+% --- 用于控制【项目描述】与下方【要点列表】的距离 ---
+\newlength{\intraProjectListTopSep}
+\setlength{\intraProjectListTopSep}{0.3em} % <--- 在此调整描述和列表的距离
+
+% =======================================================================
+
+\titleformat{\section}         % 定制 \section 命令 
+{\large\bfseries\raggedright} % 将 section 标题设置为大号、粗体且左对齐
+{}{0em}                      % 可用于为所有 section 添加前缀（如“章节...”）
+{}                           % 可用于在标题前插入代码
+[{\color{CVBlue}\titlerule}]  % 在标题后插入一条横线
+\titlespacing*{\section}{0cm}{*1.6}{*1.2}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\centerline{\LARGE\bfseries{Boyan Zhang}} 
+
+\centerline{\normalsize{\faPhone\ (+86) 182-9548-5672 \quad \faEnvelopeO\ \href{mailto:boyan-z@outlook.com}{boyan-z@outlook.com} \quad \faLinkedinSquare\ \href{https://www.linkedin.com/in/boyan-zhang-cs}{www.linkedin.com/in/boyan-zhang-cs}}} 
+
+\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ Education}
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{KTH Royal Institute of Technology} & M.Sc. in Computer Science & Aug 2025 – Jun 2027 \\
+\end{tabular*}
+\begin{itemize}[nosep,leftmargin=1.5em]
+    \item Selected for the Zhejiang University--KTH 3+2 Joint Master's Program (accelerated B.Eng.–M.Sc. pathway).
+\end{itemize}
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{Zhejiang University} & B.Eng. in Computer Science and Technology & Aug 2022 – Jun 2025
+\end{tabular*}
+
+\section{\makebox[\widthof{\faBriefcase}][c]{\color{CVBlue}\faBriefcase}\ Work Experience}
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{Microsoft STCA (Beijing, China)} & Software Engineer Intern & Jun 2026 – Sep 2026 \\
+\end{tabular*}\titlebreak
+\begin{itemize}[nosep]
+    \item \textbf{Agentic Evaluation Infrastructure:} Enhanced an LLM-as-a-Judge framework for Enterprise Search agents, owning case synchronization, grading, and human verification. Redesigned the evaluator with agentic reasoning over workbook outputs, chat responses, and execution traces, enabling diagnosis of model reasoning issues versus tool failures.
+
+    \item \textbf{Enterprise Search Retrieval Optimization:} Designed and shipped production optimizations for agent retrieval, including lazy context loading for email threads and batched graph traversal for organizational queries. Reduced redundant context exposure and tool invocation overhead through selective retrieval and optimized BFS-based graph expansion.
+\end{itemize}
+
+\projectsep
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{ErholCare (Stockholm, Sweden)} & Mobile Developer Intern & Nov 2025 – Feb 2026 \\
+\end{tabular*}\titlebreak
+\begin{itemize}[nosep]
+    \item \textbf{AI-Driven Mobile Application Development:} Designed and developed a comprehensive AI-driven mobile App for care workers and healthcare organizations, improving efficiency in documentation, scheduling, and team collaboration.
+    \item \textbf{Performance Optimization \& UX Upgrade:} Optimized app performance across devices and improved complex interfaces through intensive debugging and user feedback, with user satisfaction surveys showing significant improvement.
+\end{itemize}
+
+\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ Project Experience}
+
+\textbf{Mini-OS} \hfill C and RISC-V assembly \titlebreak
+\begin{itemize}[nosep]
+    \item Built a minimalist Linux-like OS for RV64 with shell, file I/O, process management and other essential functionalities.
+    \item Strengthened understanding of Linux internals and low-level system design.
+\end{itemize}
+
+\projectsep
+
+\textbf{Mini-SQL} \hfill C++ \titlebreak
+\begin{itemize}[nosep]
+    \item Developed a lightweight DBMS with SQL parsing, query execution, and character-based user interface.
+    \item Practiced object-oriented design and modular architecture for scalable systems, strengthened understanding of relational database principles.
+\end{itemize}
+
+\projectsep
+
+\textbf{Image Colorization using GANs} \hfill Python (PyTorch, Tkinter) \titlebreak
+\begin{itemize}[nosep]
+    \item Trained a GAN with U-Net generator and ResNet-based discriminator to colorize grayscale images.
+    \item Built a GUI application for interactive image colorization and model visualization.
+\end{itemize}
+
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ Skills}
+\begin{itemize}[nosep]
+    \item \textbf{Programming Languages:} C/C++, Java, Python, TypeScript, Node.js, Dart, RISC-V Assembly, Verilog
+    \item \textbf{Frameworks \& Tools:} PyTorch, Spring Boot, Flutter, MySQL, Git, Xilinx Vivado
+\end{itemize}
+
+\section{\makebox[\widthof{\faTrophy}][c]{\color{CVBlue}\faTrophy}\ Honours and Awards}
+\begin{itemize}
+    \item Third Prize Scholarship, Zhejiang University \hfill 2022-2023
+    \item National Encouragement Scholarship (China) \hfill 2022-2023 \& 2024-2025
+\end{itemize}
+
+\end{document}

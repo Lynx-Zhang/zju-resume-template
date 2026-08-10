@@ -82,78 +82,72 @@
 \begin{document}
 \pagenumbering{gobble}
 
-\centerline{\LARGE\bfseries{Boyan Zhang}} 
+\centerline{\LARGE\bfseries{张博研}} 
 
-\centerline{\normalsize{\faPhone\ (+86) 182-9548-5672 \quad \faEnvelopeO\ \href{mailto:boyan-z@outlook.com}{boyan-z@outlook.com} \quad \faLinkedinSquare\ \href{https://www.linkedin.com/in/boyan-zhang-cs}{www.linkedin.com/in/boyan-zhang-cs}}} 
+\centerline{\normalsize{\faPhone\ (+86) 182-9548-5672 \quad \faEnvelopeO\ \href{mailto:boyan-z@outlook.com}{boyan-z@outlook.com}}} 
 
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ Education}
-
-\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
-    \textbf{KTH Royal Institute of Technology} & M.Sc. in Computer Science & Aug 2025 – Jun 2027 \\
-\end{tabular*}
-\begin{itemize}[nosep,leftmargin=1.5em]
-    \item Selected for the Zhejiang University--KTH 3+2 Joint Master's Program (accelerated B.Eng.–M.Sc. pathway).
-\end{itemize}
-
-\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
-    \textbf{Zhejiang University} & B.Eng. in Computer Science and Technology & Aug 2022 – Jun 2025
+\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育经历}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l >{\raggedright\arraybackslash}p{0.42\textwidth} r @{} }
+    \textbf{瑞典皇家理工学院 (KTH)} & 硕士，计算机科学 & 2025.08 – 2027.06 \\
+    \textbf{浙江大学} & 本科，计算机科学与技术 \quad GPA: 3.99/4.3 & 2022.08 – 2025.06
 \end{tabular*}
 
-\section{\makebox[\widthof{\faBriefcase}][c]{\color{CVBlue}\faBriefcase}\ Work Experience}
+\section{\makebox[\widthof{\faBriefcase}][c]{\color{CVBlue}\faBriefcase}\ 工作经历}
 
-\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
-    \textbf{Microsoft STCA (Beijing, China)} & Software Engineer Intern & Jun 2026 – Sep 2026 \\
+```latex
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{微软亚洲互联网工程院 (北京)} & 软件工程实习生 (Software Engineer Intern) & 2026.06 – 2026.09 \\
 \end{tabular*}\titlebreak
 \begin{itemize}[nosep]
-    \item \textbf{Agentic Evaluation Infrastructure:} Enhanced an LLM-as-a-Judge framework for Enterprise Search agents, owning case synchronization, grading, and human verification. Redesigned the evaluator with agentic reasoning over workbook outputs, chat responses, and execution traces, enabling diagnosis of model reasoning issues versus tool failures.
-
-    \item \textbf{Enterprise Search Retrieval Optimization:} Designed and shipped production optimizations for agent retrieval, including lazy context loading for email threads and batched graph traversal for organizational queries. Reduced redundant context exposure and tool invocation overhead through selective retrieval and optimized BFS-based graph expansion.
+    \item \textbf{Agentic 评估基础设施:} 参与演进基于 LLM-as-a-Judge 的 Enterprise Search Agent 评估框架，负责 Case 同步、自动评分与人工校验。重构评估器，引入工作簿结果、对话响应与执行轨迹进行 Agentic 分析，实现模型推理问题与工具故障的细粒度诊断。
+    \item \textbf{Enterprise Search 检索优化:} 设计并落地生产环境的 Agent 检索优化，包括邮件线程上下文按需加载及组织关系查询的批量图遍历。通过选择性上下文获取与优化 BFS 图搜索，减少冗余上下文暴露及 Tool Call 开销。
 \end{itemize}
+```
 
 \projectsep
 
-\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
-    \textbf{ErholCare (Stockholm, Sweden)} & Mobile Developer Intern & Nov 2025 – Feb 2026 \\
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{ErholCare (瑞典)} & 移动端开发实习生 (Mobile Developer Intern) & 2025.11 – 2026.02 \\
 \end{tabular*}\titlebreak
 \begin{itemize}[nosep]
-    \item \textbf{AI-Driven Mobile Application Development:} Designed and developed a comprehensive AI-driven mobile App for care workers and healthcare organizations, improving efficiency in documentation, scheduling, and team collaboration.
-    \item \textbf{Performance Optimization \& UX Upgrade:} Optimized app performance across devices and improved complex interfaces through intensive debugging and user feedback, with user satisfaction surveys showing significant improvement.
+    \item \textbf{主导设计并开发 AI 驱动的医疗护理移动应用:} 针对护理人员及医疗机构需求，利用 Dart/Flutter 实现全流程功能开发；通过集成 AI 模块优化文档自动化生成、智能排班及团队协作流程，提升了业务处理效率。
+    \item \textbf{深度性能调优与交互体验升级:} 针对复杂 UI 场景进行专项性能优化，解决多端适配及长列表卡顿问题；通过深度调试与用户反馈持续迭代交互逻辑，经后期用户调研验证，系统可用性与满意度均获得显著提升。
 \end{itemize}
 
-\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ Project Experience}
+\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
 
-\textbf{Mini-OS} \hfill C and RISC-V assembly \titlebreak
+\textbf{类 Linux 操作系统实现 (Mini-OS)} \hfill C and RISC-V assembly \titlebreak
 \begin{itemize}[nosep]
-    \item Built a minimalist Linux-like OS for RV64 with shell, file I/O, process management and other essential functionalities.
-    \item Strengthened understanding of Linux internals and low-level system design.
+    \item 基于 RV64 (RISC-V) 架构实现类 Linux 极简系统，涵盖 Shell、文件 I/O 及进程管理等核心功能。
+    \item 通过底层开发深度实践了 Linux 内核机理及计算机系统底层设计原理。
 \end{itemize}
 
 \projectsep
 
-\textbf{Mini-SQL} \hfill C++ \titlebreak
+\textbf{轻量级关系型数据库系统 (Mini-SQL)} \hfill C++ \titlebreak
 \begin{itemize}[nosep]
-    \item Developed a lightweight DBMS with SQL parsing, query execution, and character-based user interface.
-    \item Practiced object-oriented design and modular architecture for scalable systems, strengthened understanding of relational database principles.
+    \item 开发并实现轻量级 DBMS，核心模块涵盖 SQL 解析、执行引擎、B+ 树索引结构及命令行交互界面。
+    \item 实现底层分页管理与缓冲区机制，基于面向对象与模块化架构设计，确保系统高扩展性，深度实践关系型数据库底层原理。
 \end{itemize}
 
 \projectsep
 
-\textbf{Image Colorization using GANs} \hfill Python (PyTorch, Tkinter) \titlebreak
+\textbf{基于 GAN 的图像自动上色系统} \hfill Python (PyTorch, Tkinter) \titlebreak
 \begin{itemize}[nosep]
-    \item Trained a GAN with U-Net generator and ResNet-based discriminator to colorize grayscale images.
-    \item Built a GUI application for interactive image colorization and model visualization.
+    \item 基于 GAN 架构实现灰度图自动上色，采用 U-Net 生成器与 ResNet 判别器显著提升了色彩还原的纹理细节与一致性。
+    \item 构建交互式 GUI 应用程序，集成实时上色与可视化功能，提升了算法的可解释性与用户交互体验。
 \end{itemize}
 
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ Skills}
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
 \begin{itemize}[nosep]
-    \item \textbf{Programming Languages:} C/C++, Java, Python, TypeScript, Node.js, Dart, RISC-V Assembly, Verilog
-    \item \textbf{Frameworks \& Tools:} PyTorch, Spring Boot, Flutter, MySQL, Git, Xilinx Vivado
+    \item \textbf{编程语言:} C/C++, Java, Python, TypeScript, Node.js, Dart, RISC-V 汇编, Verilog
+    \item \textbf{框架与工具:} PyTorch, Spring Boot, Flutter, MySQL, Git, Xilinx Vivado
 \end{itemize}
 
-\section{\makebox[\widthof{\faTrophy}][c]{\color{CVBlue}\faTrophy}\ Honours and Awards}
+\section{\makebox[\widthof{\faTrophy}][c]{\color{CVBlue}\faTrophy}\ 荣誉奖励}
 \begin{itemize}
-    \item Third Prize Scholarship, Zhejiang University \hfill 2022-2023
-    \item National Encouragement Scholarship (China) \hfill 2022-2023 \& 2024-2025
+    \item 浙江大学校设三等奖学金 \hfill 2022-2023学年
+    \item 国家励志奖学金 \hfill 2022-2023学年及2024-2025学年
 \end{itemize}
 
 \end{document}
