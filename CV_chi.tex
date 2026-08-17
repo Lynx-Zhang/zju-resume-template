@@ -87,25 +87,33 @@
 \centerline{\normalsize{\faPhone\ (+86) 182-9548-5672 \quad \faEnvelopeO\ \href{mailto:boyan-z@outlook.com}{boyan-z@outlook.com}}} 
 
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育经历}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l >{\raggedright\arraybackslash}p{0.42\textwidth} r @{} }
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
     \textbf{瑞典皇家理工学院 (KTH)} & 硕士，计算机科学 & 2025.08 – 2027.06 \\
-    \textbf{浙江大学} & 本科，计算机科学与技术 \quad GPA: 3.99/4.3 & 2022.08 – 2025.06
 \end{tabular*}
+
+\begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{浙江大学} & 本科，计算机科学与技术 & 2022.08 – 2025.06 \\
+\end{tabular*}
+\begin{itemize}[nosep,leftmargin=1.5em]
+    \item GPA: 3.99/4.3；浙江大学—KTH 3+2 本硕联合培养项目
+\end{itemize}
 
 \section{\makebox[\widthof{\faBriefcase}][c]{\color{CVBlue}\faBriefcase}\ 工作经历}
 
+
 \begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}@{\extracolsep{\fill}}r@{}}
-    \textbf{微软亚洲互联网工程院 (北京)} & 软件工程实习生 (Software Engineer Intern) & 2026.06 – 2026.09 \\
+    \textbf{微软亚洲互联网工程院 (北京)} & Excel AI/Agent 软件工程实习生 & 2026.06 – 2026.09 \\
 \end{tabular*}\titlebreak
 \begin{itemize}[nosep]
-    \item \textbf{自动化评估体系建设与调优:} 参与构建基于 LLM-as-a-Judge 的多智能体评估流水线。负责从产品端到测试端的 Case 同步与集成，通过深度调优评估智能体的 Prompt 与评分细则，并结合人工校验对比，将模型在复杂 Excel 工作簿操作中的评估准确度与一致性提升了 20\%-30\%。
-    \item \textbf{Agent 框架性能与上下文优化:} 针对 Agent 获取复杂外部数据（如邮件流）的场景进行底层逻辑优化。设计并实现了基于页面的数据截断、批量请求机制以及同源 Thread 会话自动去重合并功能。大幅减少了冗余上下文对 Token 的占用，显著降低了系统 API 调用的延迟并提升了响应效率。
+    \item \textbf{Agentic 评估基础设施:} 参与演进基于 LLM-as-a-Judge 的 Microsoft Excel Agent 评估框架，负责 Case 同步、自动评分与人工校验。重构评估器，引入Excel工作簿结果、对话响应与执行轨迹进行 Agentic 分析，实现模型推理问题与工具故障的细粒度诊断。
+    \item \textbf{Enterprise Search 检索优化:} 设计并落地生产环境的 Agent 检索优化，包括邮件线程上下文按需加载及组织关系查询的批量图遍历。通过选择性上下文获取与优化 BFS 图搜索，减少冗余上下文暴露及 Tool Call 开销。
 \end{itemize}
 
 \projectsep
 
 \begin{tabular*}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.34\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}@{\extracolsep{\fill}}r@{}}
-    \textbf{ErholCare (瑞典)} & 移动端开发实习生 (Mobile Developer Intern) & 2025.11 – 2026.02 \\
+    \textbf{ErholCare (瑞典)} & AI/移动端开发实习生  & 2025.11 – 2026.02 \\
 \end{tabular*}\titlebreak
 \begin{itemize}[nosep]
     \item \textbf{主导设计并开发 AI 驱动的医疗护理移动应用:} 针对护理人员及医疗机构需求，利用 Dart/Flutter 实现全流程功能开发；通过集成 AI 模块优化文档自动化生成、智能排班及团队协作流程，提升了业务处理效率。
@@ -132,8 +140,8 @@
 
 \textbf{基于 GAN 的图像自动上色系统} \hfill Python (PyTorch, Tkinter) \titlebreak
 \begin{itemize}[nosep]
-    \item 基于 GAN 架构实现灰度图自动上色，采用 U-Net 生成器与 ResNet 判别器显著提升了色彩还原的纹理细节与一致性。
-    \item 构建交互式 GUI 应用程序，集成实时上色与可视化功能，提升了算法的可解释性与用户交互体验。
+    \item 从零构建图像自动上色模型，自主设计输入输出与训练流程，采用U-Net生成器与ResNet判别器进行对抗训练，优化色彩还原与纹理细节。
+    \item 基于PyTorch实现模型推理，使用Tkinter构建交互式GUI，集成图像上色与结果可视化。
 \end{itemize}
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 专业技能}
